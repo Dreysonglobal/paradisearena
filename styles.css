@@ -51,16 +51,6 @@ nav {
     order: 3;
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    order: 2;
-}
 
 .nav-menu {
     display: flex;
@@ -98,15 +88,6 @@ nav {
     text-decoration: underline;
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
 
 .hamburger span {
     width: 25px;
@@ -184,17 +165,386 @@ nav {
     background-color: #6c3483;
 }
 
-/* About Us Section */
-.about-us {
+/* Welcome Section */
+.welcome-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.welcome-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.welcome-text h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #8e44ad;
+    font-size: 2.5rem;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.welcome-text h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.facilities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.facility-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border-left: 4px solid #8e44ad;
+}
+
+.facility-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(142, 68, 173, 0.2);
+}
+
+.facility-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #8e44ad;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.facility-icon i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.facility-content h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.facility-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.facility-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.facility-content li {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.facility-content strong {
+    color: #8e44ad;
+    font-weight: bold;
+}
+
+.welcome-cta {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #8e44ad, #6c3483);
+    border-radius: 15px;
+    color: #fff;
+    margin-top: 40px;
+}
+
+.welcome-cta p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.welcome-cta p:last-of-type {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.welcome-cta .btn {
+    background-color: #fff;
+    color: #8e44ad;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.welcome-cta .btn:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Rate Card Section */
+.rate-card-section {
     padding: 80px 0;
     background-color: #f8f9fa;
 }
 
-.about-content {
+.rate-card-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8e44ad;
+    font-size: 2.5rem;
+}
+
+.rate-card-section .section-subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.pricing-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(142, 68, 173, 0.2);
+}
+
+.pricing-card.featured {
+    border-color: #8e44ad;
+    transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.popular-badge {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background: linear-gradient(135deg, #8e44ad, #6c3483);
+    color: #fff;
+    padding: 8px 40px;
+    font-size: 14px;
+    font-weight: bold;
+    transform: rotate(45deg);
+    z-index: 10;
+}
+
+.pricing-header {
+    text-align: center;
+    padding: 40px 30px 30px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.pricing-header h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.currency {
+    font-size: 1.5rem;
+    color: #8e44ad;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.amount {
+    font-size: 3rem;
+    color: #8e44ad;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.price-note {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.pricing-features {
+    padding: 30px;
+}
+
+.pricing-features h4 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.features-list i {
+    color: #8e44ad;
+    margin-right: 12px;
+    margin-top: 2px;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.pricing-footer {
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+.tax-info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tax-info p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.pricing-btn {
+    width: 100%;
+    background-color: #8e44ad;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.pricing-btn:hover {
+    background-color: #6c3483;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(142, 68, 173, 0.3);
+}
+
+.pricing-note {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-note p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.pricing-note i {
+    color: #8e44ad;
+    margin-right: 8px;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.about-content {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.about-text-only {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-text-only h2 {
+    color: #8e44ad;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-text-only p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.about-text-only ul {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.about-text-only li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 10px;
 }
 
 .about-text h2 {
@@ -884,50 +1234,90 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .header-container {
-        padding: 10px 20px;
+        padding: 8px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .logo h1 {
-        font-size: 18px;
+        font-size: 16px;
+        margin: 0;
     }
     
-    .hamburger {
+    /* Compact navigation on mobile */
+    .nav-menu {
         display: flex;
+        flex-direction: row;
+        text-align: center;
+        padding: 0;
+        gap: 8px;
+        margin: 0;
     }
     
     nav {
-        position: fixed;
-        top: 60px;
-        left: -100%;
-        width: 100%;
-        background-color: #fff;
-        transition: 0.3s;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        z-index: 999;
-        order: unset;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        order: 2;
     }
     
-    nav.active {
-        left: 0;
-    }
-    
-    .nav-menu {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px 0;
-        margin: 0;
-        gap: 0;
+    .logo {
+        order: 1;
+        flex-shrink: 0;
     }
     
     .nav-menu li {
-        margin: 10px 0;
+        margin: 0;
+        padding: 0;
     }
     
     .nav-menu a {
-        font-size: 18px;
-        padding: 8px 0;
+        font-size: 14px;
+        padding: 4px 8px;
         color: #8e44ad;
         font-weight: bold;
+        white-space: nowrap;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .header-container {
+        padding: 6px 15px;
+    }
+    
+    .logo h1 {
+        font-size: 14px;
+    }
+    
+    .nav-menu {
+        gap: 4px;
+    }
+    
+    .nav-menu a {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+    
+    .about-content {
+        padding: 60px 0;
+    }
+    
+    .about-text-only {
+        padding: 0 20px;
+    }
+    
+    .about-text-only h2 {
+        font-size: 2rem;
+    }
+    
+    .about-text-only p {
+        font-size: 1rem;
+    }
+    
+    .about-text-only li {
+        font-size: 1rem;
     }
     
     .hero-content h2 {
@@ -1006,5 +1396,77 @@ footer {
     .features h2,
     .testimonials h2 {
         font-size: 2rem;
+    }
+    
+    .welcome-text h2 {
+        font-size: 2rem;
+    }
+    
+    .welcome-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .facilities-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .facility-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .facility-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+        align-self: center;
+    }
+    
+    .welcome-cta {
+        padding: 30px 20px;
+    }
+    
+    .welcome-cta .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    
+    .rate-card-section h2 {
+        font-size: 2rem;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+    
+    .pricing-card.featured:hover {
+        transform: translateY(-10px);
+    }
+    
+    .amount {
+        font-size: 2.5rem;
+    }
+    
+    .pricing-header {
+        padding: 30px 20px 20px;
+    }
+    
+    .pricing-features {
+        padding: 20px;
+    }
+    
+    .pricing-footer {
+        padding: 20px;
+    }
+    
+    .popular-badge {
+        font-size: 12px;
+        padding: 6px 30px;
     }
 }

@@ -1,19 +1,3 @@
-// Hamburger Menu Toggle
-const hamburger = document.getElementById('hamburger');
-const nav = document.querySelector('nav');
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    nav.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        nav.classList.remove('active');
-    });
-});
 
 // Image Slider for Header
 const slides = document.querySelectorAll('.slide');
